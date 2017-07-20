@@ -27,6 +27,19 @@ export const PAGES_MENU = [
           },
         },
       },
+      {
+        path: 'manage-merchant',  // path for our page
+        data: { // custom menu declaration
+          menu: {
+            title: 'Manage Merchant', // menu title
+            icon: 'ion-compose', // menu icon
+            pathMatch: 'prefix', // use it if item children not displayed in menu
+            selected: false,
+            expanded: false,
+            order: 150,
+          },
+        }
+      },
       /*
       {
         path: 'editors',
@@ -50,7 +63,7 @@ export const PAGES_MENU = [
           },
         ],
       },
-      */
+    
       {
         path: 'components',
         data: {
@@ -73,6 +86,7 @@ export const PAGES_MENU = [
           },
         ],
       },
+      */
       {
         path: 'charts',
         data: {

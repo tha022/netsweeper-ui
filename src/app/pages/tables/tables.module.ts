@@ -64,6 +64,27 @@ import { AdvancedDemoComponent } from './components/hotTables/handsontable/advan
     SportDemoComponent,
     SheetDemoComponent
   ],
+  exports: [
+    Tables,
+    BasicTables,
+    HoverTable,
+    BorderedTable,
+    CondensedTable,
+    StripedTable,
+    ContextualTable,
+    ResponsiveTable,
+    SmartTables,
+    DataTables,
+    DataFilterPipe,
+    HotTablesComponent,
+    HandsontableSectionComponent,
+    BasicDemoComponent,
+    AdvancedDemoComponent,
+    FinanceDemoComponent,
+    ScienceDemoComponent,
+    SportDemoComponent,
+    SheetDemoComponent
+  ],
   providers: [
     BasicTablesService,
     SmartTablesService,

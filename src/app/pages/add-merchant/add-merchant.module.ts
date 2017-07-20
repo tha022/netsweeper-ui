@@ -6,7 +6,6 @@ import { AddMerchantComponent } from './add-merchant.component';
 import { routing } from './add-merchant.routing';
 
 
-
 @NgModule({
   imports: [
     CommonModule,

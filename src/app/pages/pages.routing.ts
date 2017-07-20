@@ -21,6 +21,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
       { path: 'add-merchant', loadChildren: './add-merchant/add-merchant.module#AddMerchantModule' },
+      { path: 'manage-merchant', loadChildren: './manage-merchant/manage-merchant.module#ManageMerchantModule' },
       { path: 'editors', loadChildren: './editors/editors.module#EditorsModule' },
       { path: 'components', loadChildren: './components/components.module#ComponentsModule' },
       { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
