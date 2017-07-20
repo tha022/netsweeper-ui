@@ -15,6 +15,20 @@ export const PAGES_MENU = [
         },
       },
       {
+        path: 'add-merchant',  // path for our page
+        data: { // custom menu declaration
+          menu: {
+            title: 'Add New Merchant', // menu title
+            icon: 'ion-android-add-circle', // menu icon
+            pathMatch: 'prefix', // use it if item children not displayed in menu
+            selected: false,
+            expanded: false,
+            order: 100,
+          },
+        },
+      },
+      /*
+      {
         path: 'editors',
         data: {
           menu: {
@@ -36,6 +50,7 @@ export const PAGES_MENU = [
           },
         ],
       },
+      */
       {
         path: 'components',
         data: {
