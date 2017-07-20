@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-md-6 col-sm-10">
+     
+        <form [formGroup]="addMerchantForm" (ngSubmit)="onAdd()">
+            <div class="form-group" >
+                <label for="merchantName">Merchant Name</label>
+                <input class="form-control" type="text" formControlName="merchantName" id="merchantName" placeholder="Enter name" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="username">User Name</label>
+                <input class="form-control" type="text" formControlName="username" id="username" placeholder="Enter user name" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="email">Merchant Email</label>
+                <input class="form-control" type="email" formControlName="email" id="email" placeholder="Enter e-mail" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="password">Password</label>
+                <input class="form-control" type="password" formControlName="password" id="password" placeholder="Enter password">
+            </div>
+
+            <div class="form-group" >
+                <label for="adressOne">Address 1</label>
+                <input class="form-control" type="email" formControlName="adressOne" id="adressOne" placeholder="Enter adress" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="adressTwo">Address 2</label>
+                <input class="form-control" type="email" formControlName="adressTwo" id="adressTwo" placeholder="Enter adress">
+            </div>
+
+            <div class="form-group" >
+                <label for="city">City</label>
+                <input class="form-control" type="email" formControlName="city" id="city" placeholder="Enter city" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="state">State</label>
+                <input class="form-control" type="text" formControlName="state" id="state" placeholder="Enter state" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="postal">Postal ZIP</label>
+                <input class="form-control" type="text" formControlName="postal" id="postal" placeholder="Enter postal ZIP" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="country">Country</label>
+                <input class="form-control" type="text" formControlName="country" id="country" placeholder="Enter country" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="phone">Phone Number</label>
+                <input class="form-control" type="tel" formControlName="phone" id="phone" placeholder="Enter phone number" required>
+            </div>
+
+            <div class="form-group" >
+                <label for="vat">VAT Number</label>
+                <input class="form-control" type="number" formControlName="vat" id="vat" placeholder="Enter VAT numer" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+
