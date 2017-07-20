@@ -10,9 +10,9 @@ export const PAGES_MENU = [
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
-            order: 0
-          }
-        }
+            order: 0,
+          },
+        },
       },
       {
         path: 'editors',
@@ -23,7 +23,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 100,
-          }
+          },
         },
         children: [
           {
@@ -31,10 +31,10 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.ck_editor',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: 'components',
@@ -45,7 +45,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 250,
-          }
+          },
         },
         children: [
           {
@@ -53,10 +53,10 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.tree_view',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: 'charts',
@@ -75,10 +75,10 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.chartist_js',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: 'ui',
@@ -89,7 +89,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 300,
-          }
+          },
         },
         children: [
           {
@@ -97,50 +97,50 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.typography',
-              }
-            }
+              },
+            },
           },
           {
             path: 'buttons',
             data: {
               menu: {
                 title: 'general.menu.buttons',
-              }
-            }
+              },
+            },
           },
           {
             path: 'icons',
             data: {
               menu: {
                 title: 'general.menu.icons',
-              }
-            }
+              },
+            },
           },
           {
             path: 'modals',
             data: {
               menu: {
                 title: 'general.menu.modals',
-              }
-            }
+              },
+            },
           },
           {
             path: 'slim',
             data: {
               menu: {
                 title: 'Slim loading bar',
-              }
-            }
+              },
+            },
           },
           {
             path: 'grid',
             data: {
               menu: {
                 title: 'general.menu.grid',
-              }
-            }
+              },
+            },
           },
-        ]
+        ],
       },
       {
         path: 'forms',
