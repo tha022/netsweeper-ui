@@ -66,3 +66,11 @@ Yes!  Visit [our homepage](http://akveo.com/) or simply leave us a message to [c
 
 Enjoy :metal:
 We're always happy to receive your feedback!
+
+# Heroku setup
+Using this [buildpack](https://elements.heroku.com/buildpacks/devmynd/heroku-buildpack-angular-spa). Read also this [blog post](https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352) on how to deploy to Heroku.
+## Create application
+    $ heroku create netsweeper-ui --buildpack https://github.com/devmynd/heroku-buildpack-angular-spa.git
+## Setting buildpack explicitly
+    $ heroku buildpacks:set https://github.com/devmynd/heroku-buildpack-angular-spa.git -a netsweeper-ui
+	  $ heroku buildpacks:set heroku/nodejs -a netsweeper-ui
