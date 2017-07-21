@@ -38,7 +38,7 @@ export const PAGES_MENU = [
             expanded: false,
             order: 150,
           },
-        }
+        },
       },
       /*
       {
