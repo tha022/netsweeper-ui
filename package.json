@@ -120,5 +120,9 @@
     "underscore": "1.8.3",
     "wintersmith": "2.2.5",
     "wintersmith-sassy": "1.1.0"
+  },
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
   }
 }
