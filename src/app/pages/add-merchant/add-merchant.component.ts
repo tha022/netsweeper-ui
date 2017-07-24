@@ -34,20 +34,45 @@ export class AddMerchantComponent implements OnInit {
   }
 
   onAdd(): void {
-      /*
-      let formData = this.addMerchantForm.value;
-      let email = formData.email;
-      let password = formData.password;
-      
-      let user = {email, password};
 
-      this.userService.login(user).subscribe(_user => {
-        alert("Congratulations! You are logged in.");
-        this.router.navigate(['/home']);
-      }, (err) => {
-        alert(err);
-        this.router.navigate(['/auth/signup']);
-      });
-      */
+      const formData = this.addMerchantForm.value;
+
+      const merchantName = formData.merchantName,
+        username = formData.username,
+        email = formData.email,
+        password = formData.password,
+        adressOne = formData.adressOne,
+        adressTwo = formData.adresstwo,
+        city = formData.city,
+        state = formData.state,
+        postal = formData.postal,
+        country = formData.country,
+        phone = formData.phone,
+        vat = formData.vat;
+      
+      const merchant = { 
+        merchantName, 
+        username, 
+        email, 
+        password, 
+        adressOne, 
+        adressTwo, 
+        city, 
+        state, 
+        postal, 
+        country, 
+        phone, 
+        vat, 
+      };
+      alert(JSON.stringify(merchant));
+
+      // this.userService.login(user).subscribe(_user => {
+      //   alert("Congratulations! You are logged in.");
+      //   this.router.navigate(['/home']);
+      // }, (err) => {
+      //   alert(err);
+      //   this.router.navigate(['/auth/signup']);
+      // });
+      
     }
 }

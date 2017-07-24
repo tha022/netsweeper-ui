@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "title": "json-server test 2",
+      "city": "Kyiv",
+      "author": "Anastasia and Thomas",
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "merchants": [
+    {
+      "id": 1,
+      "name": "Nick Webshodsfdsfdfsp",
+      "city": "Kyiv Oblast",
+      "turnover": 10000.1,
+      "currency": "UAH"
+    },
+    {
+      "name": "Nick Webshop",
+      "city": "Kyiv Oblast",
+      "turnover": 10000.1,
+      "currency": "UAH",
+      "id": 2
+    },
+    {
+      "name": "Thomas Webshop",
+      "city": "Kyiv",
+      "turnover": 100.1,
+      "currency": "UAH",
+      "id": 3
+    }
+  ]
+}

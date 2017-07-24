@@ -74,3 +74,11 @@ Using this [buildpack](https://elements.heroku.com/buildpacks/devmynd/heroku-bui
 ## Setting buildpack explicitly
     $ heroku buildpacks:set https://github.com/devmynd/heroku-buildpack-angular-spa.git -a netsweeper-ui
 	  $ heroku buildpacks:set heroku/nodejs -a netsweeper-ui
+
+# JSON Server
+Documentation [here](https://github.com/typicode/json-server).
+All files related to DB is in db/ folder
+## Installation
+    $ npm install -g json-server
+## Start Server
+    $ json-server --watch db.json
