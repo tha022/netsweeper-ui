@@ -41,6 +41,21 @@
       "turnover": 100.1,
       "currency": "UAH",
       "id": 3
+    },
+    {
+      "id": 4,
+      "merchantName": "merchant 1", 
+      "username": "user 1",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "adressTwo": "ad2",
+      "city": "Kyiv",
+      "state": "Kyiv", 
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": "123"
     }
   ]
 }

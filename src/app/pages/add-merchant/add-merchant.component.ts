@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MerchantService } from '../shared/services/merchant.service';
 
 @Component({
   selector: 'add-merchant',
@@ -12,8 +13,8 @@ export class AddMerchantComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder, 
-    // private userService: UserService,
     private router: Router,
+    private merchantService: MerchantService,
   ) { }
 
  ngOnInit() {
@@ -48,9 +49,11 @@ export class AddMerchantComponent implements OnInit {
         postal = formData.postal,
         country = formData.country,
         phone = formData.phone,
-        vat = formData.vat;
+        vat = formData.vat,
+        id = String(Date.now());
       
       const merchant = { 
+        id,
         merchantName, 
         username, 
         email, 
@@ -64,15 +67,10 @@ export class AddMerchantComponent implements OnInit {
         phone, 
         vat, 
       };
+
       alert(JSON.stringify(merchant));
 
-      // this.userService.login(user).subscribe(_user => {
-      //   alert("Congratulations! You are logged in.");
-      //   this.router.navigate(['/home']);
-      // }, (err) => {
-      //   alert(err);
-      //   this.router.navigate(['/auth/signup']);
-      // });
-      
+      this.merchantService.addMerchant(merchant);
+
     }
 }

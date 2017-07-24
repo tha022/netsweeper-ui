@@ -28,7 +28,7 @@ export class ManageMerchantComponent {
     columns: {
       id: {
         title: 'ID',
-        type: 'number',
+        type: 'string',
       },
       merchantName: {
         title: 'Merchant Name',
@@ -40,11 +40,11 @@ export class ManageMerchantComponent {
       },
       phoneNumber: {
         title: 'Phone Number',
-        type: 'number',
+        type: 'string',
       },
       vatNumber: {
         title: 'VAT Number',
-        type: 'number',
+        type: 'string',
       },
     },
   };
