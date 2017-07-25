@@ -17,7 +17,7 @@ export class MerchantService {
         const headers = new Headers({ 'Content-Type': 'application/json' }); 
         const options = new RequestOptions({ headers }); 
 
-        return this.http.post(this.merchantsUrl, merchant, options) 
+        return this.http.post(this.merchantsUrl, JSON.stringify(merchant), options) 
                          .map((res: Response) => res.json()) 
                          .catch((error: any) => 
                             Observable.throw(error.json().error || 'Server error'),

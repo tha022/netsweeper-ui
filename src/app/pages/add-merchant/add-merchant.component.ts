@@ -68,9 +68,12 @@ export class AddMerchantComponent implements OnInit {
         vat, 
       };
 
-      alert(JSON.stringify(merchant));
-
-      this.merchantService.addMerchant(merchant);
+      this.merchantService.addMerchant(merchant)
+        .subscribe(
+          data => console.log(JSON.stringify(data)),
+          error => alert(`${error.status} ${error.error}`),
+          () => alert('Merchant is successfully saved'),
+        );
 
     }
 }

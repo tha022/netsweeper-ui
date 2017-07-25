@@ -1,57 +1,117 @@
 {
-  "posts": [
-    {
-      "title": "json-server test 2",
-      "city": "Kyiv",
-      "author": "Anastasia and Thomas",
-      "id": 1
-    },
-    {
-      "id": 2
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "merchants": [
     {
       "id": 1,
-      "name": "Nick Webshodsfdsfdfsp",
-      "city": "Kyiv Oblast",
-      "turnover": 10000.1,
-      "currency": "UAH"
-    },
-    {
-      "name": "Nick Webshop",
-      "city": "Kyiv Oblast",
-      "turnover": 10000.1,
-      "currency": "UAH",
-      "id": 2
-    },
-    {
-      "name": "Thomas Webshop",
-      "city": "Kyiv",
-      "turnover": 100.1,
-      "currency": "UAH",
-      "id": 3
-    },
-    {
-      "id": 4,
-      "merchantName": "merchant 1", 
+      "merchantName": "merchant 1",
       "username": "user 1",
       "email": "email@gmail.com",
       "password": "123",
       "adressOne": "ad1",
       "adressTwo": "ad2",
       "city": "Kyiv",
-      "state": "Kyiv", 
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": "123"
+    },
+    {
+      "id": 2,
+      "merchantName": "merchant 2",
+      "username": "user 2",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "adressTwo": "ad2",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": "123"
+    },
+    {
+      "id": 3,
+      "merchantName": "merchant 3",
+      "username": "user 3",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "adressTwo": "ad2",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": "123"
+    },
+    {
+      "id": 4,
+      "merchantName": "merchant 4",
+      "username": "user 4",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "adressTwo": "ad2",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": "123"
+    },
+    {
+      "id": 5,
+      "merchantName": "merchant 5",
+      "username": "user 5",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "adressTwo": "ad2",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": "123"
+    },
+    {
+      "id": "1500983194524",
+      "merchantName": "merchant 6",
+      "username": "user 6",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": 123
+    },
+    {
+      "id": "1500983526018",
+      "merchantName": "merchant 7",
+      "username": "user 7",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "123",
+      "vat": 123
+    },
+    {
+      "id": "1500984099673",
+      "merchantName": "merchant 8",
+      "username": "user 8",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "city": "Kyiv",
+      "state": "Kyiv",
       "postal": "01001",
       "country": "Ukraine",
       "phone": "123",

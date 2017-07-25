@@ -1,6 +1,5 @@
 <div class="row">
     <div class="col-md-6 col-sm-10">
-     
         <form [formGroup]="addMerchantForm" (ngSubmit)="onAdd()">
             <div class="form-group" >
                 <label>Merchant Name</label>
@@ -9,68 +8,68 @@
             </div>
 
             <div class="form-group" >
-                <label for="username">User Name</label>
-                <input class="form-control" type="text" formControlName="username" id="username" placeholder="Enter user name">
+                <label>User Name</label>
+                <input class="form-control" type="text" formControlName="username" placeholder="Enter user name">
                 <p *ngIf="addMerchantForm.controls.username.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="email">Merchant Email</label>
-                <input class="form-control" type="email" formControlName="email" id="email" placeholder="Enter e-mail">
+                <label>Merchant Email</label>
+                <input class="form-control" type="email" formControlName="email" placeholder="Enter e-mail">
                 <p *ngIf="addMerchantForm.controls.email.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="password">Password</label>
-                <input class="form-control" type="password" formControlName="password" id="password" placeholder="Enter password">
+                <label>Password</label>
+                <input class="form-control" type="password" formControlName="password" placeholder="Enter password">
                 <p *ngIf="addMerchantForm.controls.password.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="adressOne">Address 1</label>
-                <input class="form-control" type="email" formControlName="adressOne" id="adressOne" placeholder="Enter adress">
+                <label>Address 1</label>
+                <input class="form-control" type="text" formControlName="adressOne" placeholder="Enter adress">
                 <p *ngIf="addMerchantForm.controls.adressOne.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="adressTwo">Address 2</label>
-                <input class="form-control" type="email" formControlName="adressTwo" id="adressTwo" placeholder="Enter adress">
+                <label>Address 2</label>
+                <input class="form-control" type="text" formControlName="adressTwo" placeholder="Enter adress">
                 <p *ngIf="addMerchantForm.controls.adressTwo.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="city">City</label>
-                <input class="form-control" type="email" formControlName="city" id="city" placeholder="Enter city">
+                <label>City</label>
+                <input class="form-control" type="text" formControlName="city" placeholder="Enter city">
                 <p *ngIf="addMerchantForm.controls.email.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="state">State</label>
-                <input class="form-control" type="text" formControlName="state" id="state" placeholder="Enter state">
+                <label>State</label>
+                <input class="form-control" type="text" formControlName="state" placeholder="Enter state">
                 <p *ngIf="addMerchantForm.controls.state.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="postal">Postal ZIP</label>
-                <input class="form-control" type="text" formControlName="postal" id="postal" placeholder="Enter postal ZIP">
+                <label>Postal ZIP</label>
+                <input class="form-control" type="text" formControlName="postal" placeholder="Enter postal ZIP">
                 <p *ngIf="addMerchantForm.controls.postal.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="country">Country</label>
-                <input class="form-control" type="text" formControlName="country" id="country" placeholder="Enter country">
+                <label>Country</label>
+                <input class="form-control" type="text" formControlName="country" placeholder="Enter country">
                 <p *ngIf="addMerchantForm.controls.country.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="phone">Phone Number</label>
-                <input class="form-control" type="tel" formControlName="phone" id="phone" placeholder="Enter phone number">
+                <label>Phone Number</label>
+                <input class="form-control" type="tel" formControlName="phone" placeholder="Enter phone number">
                 <p *ngIf="addMerchantForm.controls.phone.errors">This field is required!</p>
             </div>
 
             <div class="form-group" >
-                <label for="vat">VAT Number</label>
-                <input class="form-control" type="number" formControlName="vat" id="vat" placeholder="Enter VAT numer">
+                <label>VAT Number</label>
+                <input class="form-control" type="text" formControlName="vat" placeholder="Enter VAT numer">
                 <p *ngIf="addMerchantForm.controls.vat.errors">This field is required!</p>
             </div>
             
