@@ -116,6 +116,48 @@
       "country": "Ukraine",
       "phone": "123",
       "vat": "123"
+    },
+    {
+      "id": "1500994722387",
+      "merchantName": "merchant 9",
+      "username": "user 9",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukrane",
+      "phone": "123",
+      "vat": "123"
+    },
+    {
+      "id": "1500994738516",
+      "merchantName": "merchant 9",
+      "username": "user 9",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukrane",
+      "phone": "123",
+      "vat": "123"
+    },
+    {
+      "id": "1500994744373",
+      "merchantName": "merchant 9",
+      "username": "user 9",
+      "email": "email@gmail.com",
+      "password": "123",
+      "adressOne": "ad1",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukrane",
+      "phone": "123",
+      "vat": "123"
     }
   ]
 }

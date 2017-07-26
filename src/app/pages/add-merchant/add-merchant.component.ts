@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MerchantService } from '../shared/services/merchant.service';
+import { ValidationService } from '../shared/services/validation.service';
 
 @Component({
   selector: 'add-merchant',
@@ -21,15 +22,15 @@ export class AddMerchantComponent implements OnInit {
     this.addMerchantForm = this.formBuilder.group({
       merchantName: ['', Validators.required],
       username: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: ['', [Validators.required, ValidationService.emailValidator]],
+      password: ['', [Validators.required, ValidationService.passwordValidator]],
       adressOne: ['', Validators.required],
       adressTwo: ['', Validators.required],
       city: ['', Validators.required],
       state: ['', Validators.required],
       postal: ['', Validators.required],
       country: ['', Validators.required],
-      phone: ['', Validators.required],
+      phone: ['', [Validators.required, ValidationService.phoneValidator]],
       vat: ['', Validators.required],
     });
   }
