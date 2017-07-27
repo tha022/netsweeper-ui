@@ -17,6 +17,7 @@ import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 
+import { ConfigService } from './config';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -51,6 +52,7 @@ export type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     APP_PROVIDERS,
+    ConfigService
   ],
 })
 

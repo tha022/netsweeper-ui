@@ -1,0 +1,156 @@
+<div class="row">
+    <div class="col-md-6 col-sm-10">
+        <form [formGroup]="taxUserForm">
+            <div class="form-group" >
+                <label for="name">Tax Officer Name</label>
+                <input class="form-control" type="text" name=""
+                placeholder="Enter name" id="name"
+                formControlName="taxOfficerName">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxOfficerName'].invalid &&
+                    taxUserForm.controls['taxOfficerName'].touched">
+                    Enter a correct officer name
+                </div>
+
+            </div>
+
+            <div class="form-group" >
+                <label>User Name</label>
+                <input class="form-control" type="text"
+                placeholder="Enter user name"
+                formControlName="taxUserName">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserName'].invalid &&
+                    taxUserForm.controls['taxUserName'].touched">
+                    Enter a correct name
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>Tax User Email</label>
+                <input class="form-control" type="email"
+                placeholder="Enter e-mail"
+                formControlName="taxUserEmail">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserEmail'].invalid &&
+                    taxUserForm.controls['taxUserEmail'].touched">
+                    Enter a correct email
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>Password</label>
+                <input class="form-control" type="password"
+                placeholder="Enter password"
+                formControlName="taxUserPassword">
+                
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserPassword'].invalid &&
+                    taxUserForm.controls['taxUserPassword'].touched">
+                    Enter a correct password
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>Address 1</label>
+                <input class="form-control" type="text"
+                placeholder="Enter adress"
+                formControlName="taxAddressOne">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxAddressOne'].invalid &&
+                    taxUserForm.controls['taxAddressOne'].touched">
+                    Enter a correct Address 1
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>Address 2</label>
+                <input class="form-control" type="text"
+                placeholder="Enter adress"
+                formControlName="taxAddressTwo">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxAddressTwo'].invalid &&
+                    taxUserForm.controls['taxAddressTwo'].touched">
+                    Enter a correct Address 2
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>City</label>
+                <input class="form-control" type="text"
+                placeholder="Enter city"
+                formControlName="taxUserCity">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserCity'].invalid &&
+                    taxUserForm.controls['taxUserCity'].touched">
+                    Enter a correct City
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>State</label>
+                <input class="form-control" type="text"
+                placeholder="Enter state"
+                formControlName="taxUserState">
+                
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserState'].invalid &&
+                    taxUserForm.controls['taxUserState'].touched">
+                    Enter a correct City
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>Postal ZIP</label>
+                <input class="form-control" type="text"
+                placeholder="Enter postal ZIP"
+                formControlName="taxUserZip">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserZip'].invalid &&
+                    taxUserForm.controls['taxUserZip'].touched">
+                    Enter a correct City
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>Country</label>
+                <input class="form-control" type="text"
+                placeholder="Enter country"
+                formControlName="taxUserCountry">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserCountry'].invalid &&
+                    taxUserForm.controls['taxUserCountry'].touched">
+                    Enter a correct City
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label>Phone Number</label>
+                <input class="form-control" type="tel"
+                placeholder="Enter phone number"
+                formControlName="taxUserPhone">
+
+                <div class="alert alert-danger"
+                    *ngIf="taxUserForm.controls['taxUserPhone'].invalid &&
+                    taxUserForm.controls['taxUserPhone'].touched">
+                    Enter a correct City
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary"
+            (click)="addTaxUser()" [disabled]="taxUserForm.invalid">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+
+
