@@ -7,23 +7,18 @@ import 'rxjs/add/operator/catch';
 
 import { TaxUser } from '../shared/models/tax-user';
 import { ConfigService } from '../../config';
+import { TaxUserAPIService } from '../../remote-api/tax-user-api.service';
 
 @Injectable()
 export class AddTaxUserService {
 
   constructor(
     private congif: ConfigService,
-    private http: Http
+    private http: Http,
+    private taxUserService: TaxUserAPIService
   ) { }
 
-  addUser(taxUser: TaxUser) {
-    const headers = new Headers({ 'Content-Type': 'application/json' });
-    const options = new RequestOptions({ headers });
-
-    return this.http.post(`${this.congif.basePath}/${this.congif.taxUserPath}`,
-      JSON.stringify(taxUser), options)
-      .map((res: Response) => res.json())
-      .catch((error: any) => Observable.throw(error.json().error
-      || 'Server Error'));
+  addUser(taxUser: TaxUser): Observable<any> {
+    return this.taxUserService.addTaxClient(taxUser);
   }
 }
