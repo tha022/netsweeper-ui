@@ -40,6 +40,21 @@ export const PAGES_MENU = [
           },
         },
       },
+      {
+        path: 'user',
+        data: {
+          menu: {
+            title: 'Add New Tax User',
+            icon: 'fa fa-user-plus',
+            pathMatch: 'prefix',
+            selected: false,
+            expanded: false
+          }
+        }
+      }
+    ]
+  }
+];
       /*
       {
         path: 'editors',
@@ -87,6 +102,7 @@ export const PAGES_MENU = [
         ],
       },
       */
+      /*
       {
         path: 'charts',
         data: {
@@ -378,6 +394,6 @@ export const PAGES_MENU = [
           }
         }
       }
-    ]
   }
 ];
+*/
