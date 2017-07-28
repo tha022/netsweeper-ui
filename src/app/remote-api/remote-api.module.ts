@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { GenericHttpService } from './generic-http.service';
 import { TaxUserAPIService } from './tax-user-api.service';
+import { MerchantAPIService } from './merchant-api.service';
 
 @NgModule({})
 export class RemoteAPIModule {
@@ -9,7 +10,8 @@ export class RemoteAPIModule {
       ngModule: RemoteAPIModule,
       providers: [
         GenericHttpService,
-        TaxUserAPIService
+        TaxUserAPIService,
+        MerchantAPIService,
       ]
     };
   }

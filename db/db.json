@@ -116,6 +116,27 @@
       "country": "Ukraine",
       "phone": "123",
       "vat": "123"
+    },
+    {
+      "id": "1501247630355",
+      "merchantName": "merchant 1",
+      "username": "user 1",
+      "email": "email@gmail.com",
+      "password": "1234qwerty",
+      "adressOne": "ad1",
+      "city": "Kyiv",
+      "state": "Kyiv",
+      "postal": "01001",
+      "country": "Ukraine",
+      "phone": "1234567890",
+      "vat": "1234"
+    },
+    {
+      "id": "1501248993104",
+      "merchantName": "merchant 13",
+      "username": "user 13",
+      "email": "email13@gmail.com",
+      "password": "qwerty1234"
     }
   ],
   "taxusers": [

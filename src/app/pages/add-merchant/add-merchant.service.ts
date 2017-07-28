@@ -7,23 +7,19 @@ import 'rxjs/add/operator/catch';
 
 import { Merchant } from '../shared/models/merchant';
 import { ConfigService } from '../../config';
+import { MerchantAPIService } from '../../remote-api/merchant-api.service';
 
 @Injectable()
 export class AddMerchantService {
 
   constructor(
     private congif: ConfigService,
-    private http: Http
+    private http: Http,
+    private merchantService: MerchantAPIService,
   ) { }
 
-  addMerchant(merchant: Merchant): Observable<Merchant[]> {
-    const headers = new Headers({ 'Content-Type': 'application/json' });
-    const options = new RequestOptions({ headers });
-
-    return this.http.post(`${this.congif.basePath}/${this.congif.merchantPath}`,
-      JSON.stringify(merchant), options)
-        .map((res: Response) => res.json())
-        .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
+  addMerchant(merchant: Merchant): Observable<Merchant> {
+    return this.merchantService.addMerchant(merchant);
   }
 
 }
