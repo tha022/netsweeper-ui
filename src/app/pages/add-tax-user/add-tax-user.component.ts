@@ -6,16 +6,17 @@ import { EqualPasswordsValidator } from '../../theme/validators/equalPasswords.v
 
 import { AddTaxUserService } from './add-tax-user.service';
 import { ConfigService } from '../../config/config.service';
-import { mock as taxUser } from './mock-tax-user';
+import { TaxUser } from '../../pages/shared/models/tax-user';
 
 @Component({
-  selector: 'selector-name',
+  selector: 'add-tax-user', // TODO: create name for app
   templateUrl: './add-tax-user.component.html',
   styleUrls: ['./add-tax-user.component.css']
 })
 export class AddTaxUserComponent implements OnInit {
 
   taxUserForm: FormGroup;
+  taxUser: TaxUser;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -38,19 +39,17 @@ export class AddTaxUserComponent implements OnInit {
       'taxUserPhone': ['', Validators.pattern('[0-9]{12}')]
     });
   }
-
-  customCharValidator() {
+  // TODO: add type of return
+  customCharValidator(): any {
     return Validators.compose([
       Validators.required,
-      // Validators.minLength(3),
-      // Validators.maxLength(12),
-      Validators.pattern(/^[a-zA-Z]+$/)
+      Validators.pattern(/^[a-zA-Z0-9_ ]*$/i)
     ]);
   }
 
-  addTaxUser() {
-    this.addTaxUserService.addUser(taxUser).subscribe(v => {
-      // TODO: add handler
-    });
+  submit(): void {
+    const taxUser: TaxUser = this.taxUserForm.value;
+    this.addTaxUserService.addUser(taxUser).subscribe(v => {});
   }
+
 }

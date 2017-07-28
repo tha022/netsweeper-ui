@@ -7,6 +7,6 @@ export class ConfigService {
   taxUserPath: string = 'taxusers';
   merchantPath: string = 'merchants';
 
-  strongPassword: string = '^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$';
-
+  // strongPassword: string = '^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$';
+  strongPassword: string = '[0-9]{8}';
 }

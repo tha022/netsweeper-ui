@@ -12,8 +12,24 @@ export class TaxUserAPIService {
     private httpService: GenericHttpService
   ) {}
 
-  addTaxClientUser(user: TaxUser) {
+  addTaxClient(user: TaxUser): Observable<any> {
     return this.httpService.post(`${this.config.taxUserPath}`, user);
+  }
+
+  getTaxClients(path: string): Observable<any> {
+    return this.httpService.get(path);
+  }
+
+  deleteClient(path: string, id: number): Observable<any> {
+    return this.httpService.delete(`${path}/${id}`);
+  }
+
+  getTaxClient(path: string, id: number): Observable<any> {
+    return this.httpService.get(`${path}/${id}`);
+  }
+
+  updateTaxClient(path: string, params: Object = {}): Observable<any> {
+    return this.httpService.patch(path, params);
   }
 
 }

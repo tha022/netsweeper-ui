@@ -47,6 +47,75 @@ export class GenericHttpService {
       .map(this.getJson);
   }
 
+  delete(path: string, searchParams: Object = {}): Observable<any> {
+    const fullPath: string = `${this.apiPath}/${path}`;
+
+    let params: URLSearchParams = new URLSearchParams(),
+      options: RequestOptions;
+
+    Object.keys(searchParams).forEach(key => {
+      params.set(key, searchParams[key]);
+    });
+
+    options = new RequestOptions({
+      headers: this.shapeHeaders(this.headers),
+      search: params
+    });
+
+    return this.http.delete(fullPath, options)
+      .map(this.checkForError)
+      .catch(this.handleError.bind(this))
+      .map(this.getJson);
+  }
+
+  patch(path: string, params: Object = {}) {
+    let fullPath: string = `${this.apiPath}/${path}`;
+    let body = JSON.stringify(params);
+    let options: RequestOptions = new RequestOptions({
+      headers: this.shapeHeaders(this.headers)
+    });
+
+    return this.http.patch(fullPath, body, options)
+      .map(this.getJson)
+      .catch(this.handleError.bind(this));
+  }
+
+  get(path: string, searchParams: Object = {}): Observable<any> {
+    let fullPath: string = `${this.apiPath}/${path}`;
+
+    console.log(fullPath);
+    let params: URLSearchParams = new URLSearchParams(),
+      options: RequestOptions;
+
+    Object.keys(searchParams).forEach(key => {
+      params.set(key, searchParams[key]);
+    });
+
+    options = new RequestOptions({
+      headers: this.shapeHeaders(this.headers),
+      search: params
+    });
+
+    return this.http.get(fullPath, options)
+        .map(this.checkForError)
+        .catch(this.handleError.bind(this))
+        .map(this.getJson);
+  }
+
+  put(path: string, body: Object = {}): Observable<any> {
+    const fullPath: string = `${this.apiPath}/${path}`;
+
+    let jsonBody: string = JSON.stringify(body),
+      options: RequestOptions = new RequestOptions({
+        headers: this.shapeHeaders(this.headers)
+      });
+
+    return this.http.put(fullPath, jsonBody, options)
+        .map(this.checkForError)
+        .catch(this.handleError.bind(this))
+        .map(this.getJson);
+  }
+
   private shapeHeaders(defaultHeaders: Object): Headers {
     const headers: Headers = new Headers(defaultHeaders);
 

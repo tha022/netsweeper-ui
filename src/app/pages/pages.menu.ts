@@ -51,6 +51,18 @@ export const PAGES_MENU = [
             expanded: false
           }
         }
+      },
+      {
+        path: 'users',
+        data: {
+          menu: {
+            title: 'Manage All Users',
+            icon: 'fa fa-users',
+            pathMatch: 'prefix',
+            selected: false,
+            expanded: false
+          }
+        }
       }
     ]
   }
