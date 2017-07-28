@@ -5,6 +5,7 @@ export class ConfigService {
 
   basePath: string = 'http://localhost:3000';
   taxUserPath: string = 'taxusers';
+  merchantPath: string = 'merchants';
 
   // strongPassword: string = '^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$';
   strongPassword: string = '[0-9]{8}';

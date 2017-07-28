@@ -4,7 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AddMerchantComponent } from './add-merchant.component';
 import { routing } from './add-merchant.routing';
-import { MerchantService } from '../shared/services/merchant.service';
+import { ValidationService } from '../shared/services/validation.service';
+import { AddMerchantService } from './add-merchant.service';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MerchantService } from '../shared/services/merchant.service';
     AddMerchantComponent,
   ],
   providers: [
-    MerchantService,
+    AddMerchantService,
+    ValidationService, 
   ],
 })
 export class AddMerchantModule {}
