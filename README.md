@@ -1,79 +1,48 @@
-[![Build Status](https://travis-ci.org/akveo/ng2-admin.svg?branch=master)](https://travis-ci.org/akveo/ng2-admin)
-[![Join the chat at https://gitter.im/ng2-admin/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ng2-admin/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Dependency Status](https://david-dm.org/akveo/ng2-admin/status.svg)](https://david-dm.org/akveo/ng2-admin)
+# Doing Your Work
 
-# Admin panel framework based on Angular, Bootstrap 4 and Angular CLI
+### Create a Branch
+Whenever you begin work on a new feature or bugfix, it's important that you create a new branch. Not only is it proper git workflow, but it also keeps your changes organized and separated from the master branch so that you can easily submit and manage multiple pull requests for every task you complete.
 
-Admin template made with :heart:  by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get the latest news about this template first!
+To create a new branch and start working on it:
 
-### Demo
+```shell
+# Checkout the master branch - you want your new branch to come from master
+git checkout master
 
-<a target="_blank" href="http://akveo.com/ng2-admin/"><img src="http://i.imgur.com/QK9AzHj.jpg" width="600" alt="Sky Blue"/></a>
+# Create a new branch named newfeature (give your branch its own simple informative name)
+git branch newfeature
 
-<a target="_blank" href="http://akveo.com/ng2-admin/">Live Demo</a>
+# Switch to your new branch
+git checkout newfeature
+```
 
-## Angular 1.x version
-Here you can find Angular 1.x based version: [Blur Admin](http://akveo.github.io/blur-admin/)
- 
-## Documentation
-Installation, customization and other useful articles: https://akveo.github.io/ng2-admin/
+Now, go to town hacking away and making whatever changes you want to.
 
-## Based on
-Angular 2+, Angular CLI, Bootstrap 4, and lots of awesome modules and plugins
+## Submitting a Pull Request
 
-## ngx-admin-next
-The next major release is under development in https://github.com/akveo/ng2-admin/tree/ngx-admin branch.
+### Cleaning Up Your Work
 
-## BrowserStack
-This project runs its tests on multiple desktop and mobile browsers using [BrowserStack](http://www.browserstack.com).
+Prior to submitting your pull request, you might want to do a few things to clean up your branch and make it as simple as possible for the original repo's maintainer to test, accept, and merge your work.
 
-<img src="https://cloud.githubusercontent.com/assets/131406/22254249/534d889e-e254-11e6-8427-a759fb23b7bd.png" height="40" />
+```shell
+# Fetch upstream master and merge with your repo's master branch
+git checkout master
+git pull origin master
 
-## How can I support developers?
-- Star our GitHub repo :star:
-- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
-- Follow us on [Twitter](https://twitter.com/akveo_inc) :feet:
-- Like our page on [Facebook](https://www.facebook.com/akveo/) :thumbsup:
+# If there were any new commits, rebase your development branch
+git checkout newfeature
+git rebase master
+```
 
-## Can I hire you guys?
-Yes!  Visit [our homepage](http://akveo.com/) or simply leave us a message to [contact@akveo.com](mailto:contact@akveo.com). We will be happy to work with you!
+### Submitting
 
-## Features
-* TypeScript
-* Webpack
-* Responsive layout
-* High resolution
-* Bootstrap 4 CSS Framework
-* Sass
-* Angular
-* jQuery
-* Charts (Chartist, Chart.js)
-* Maps (Google, Leaflet, amMap)
-* and many more!
+Once you've committed and pushed all of your changes to GitHub, go to the repo page on GitHub, and click the pull request button. If you need to make any adjustments to your pull request, just push the updates to GitHub. Your pull request will automatically track the changes on your development branch and update.
 
-## License
-[MIT](LICENSE.txt) license.
+### Pull request
 
-## Special thanks to our awesome contributors!
+When pull request was created, you should add reviewers. After you have got review, you will be able to merge your branch to master. For doing this action you should select 'Squash and merge' and click on the button.
 
-[<img alt="nnixaa" src="https://avatars0.githubusercontent.com/u/230527?v=3&s=60" width="60">](https://github.com/nnixaa)[<img alt="lexzhukov" src="https://avatars0.githubusercontent.com/u/12192373?v=3&s=60" width="60">](https://github.com/lexzhukov)[<img alt="smartapant" src="https://avatars3.githubusercontent.com/u/3674348?v=3&s=60" width="60">](https://github.com/smartapant)[<img alt="Tibing" src="https://avatars2.githubusercontent.com/u/17410089?v=3&s=60" width="60">](https://github.com/Tibing)[<img alt="ESadouski" src="https://avatars3.githubusercontent.com/u/9255839?v=3&s=60" width="60">](https://github.com/ESadouski)[<img alt="hryb" src="https://avatars3.githubusercontent.com/u/24896429?v=3&s=60" width="60">](https://github.com/hryb)[<img alt="AlbertXingZhang" src="https://avatars3.githubusercontent.com/u/12808025?v=3&s=60" width="60">](https://github.com/AlbertXingZhang)[<img alt="iamdavidfrancis" src="https://avatars2.githubusercontent.com/u/539365?v=3&s=60" width="60">](https://github.com/iamdavidfrancis)[<img alt="Gelio" src="https://avatars3.githubusercontent.com/u/889383?v=3&s=60" width="60">](https://github.com/Gelio)[<img alt="ramsunvtech" src="https://avatars1.githubusercontent.com/u/1652629?v=3&s=60" width="60">](https://github.com/ramsunvtech)[<img alt="GRoguelon" src="https://avatars2.githubusercontent.com/u/309354?v=3&s=60" width="60">](https://github.com/GRoguelon)[<img alt="lugovsky" src="https://avatars3.githubusercontent.com/u/2788046?v=3&s=60" width="60">](https://github.com/lugovsky)[<img alt="kaleguy" src="https://avatars3.githubusercontent.com/u/1402176?v=3&s=60" width="60">](https://github.com/kaleguy)[<img alt="KostyaDanovsky" src="https://avatars3.githubusercontent.com/u/773632?v=3&s=60" width="60">](https://github.com/KostyaDanovsky)
-
-[<img alt="RonnyRoos" src="https://avatars2.githubusercontent.com/u/6583791?v=3&s=60" width="60">](https://github.com/RonnyRoos)[<img alt="gavinzhou" src="https://avatars2.githubusercontent.com/u/240780?v=3&s=60" width="60">](https://github.com/gavinzhou)[<img alt="kbrandwijk" src="https://avatars2.githubusercontent.com/u/852069?v=3&s=60" width="60">](https://github.com/kbrandwijk)[<img alt="stacyakveo" src="https://avatars2.githubusercontent.com/u/27723447?v=3&s=60" width="60">](https://github.com/stacyakveo)[<img alt="Awk34" src="https://avatars1.githubusercontent.com/u/5545474?v=3&s=60" width="60">](https://github.com/Awk34)[<img alt="pritambaral" src="https://avatars1.githubusercontent.com/u/1378718?v=3&s=60" width="60">](https://github.com/pritambaral)[<img alt="shootermv" src="https://avatars3.githubusercontent.com/u/1336862?v=3&s=60" width="60">](https://github.com/shootermv)[<img alt="tgabi333" src="https://avatars0.githubusercontent.com/u/187022?v=3&s=60" width="60">](https://github.com/tgabi333)[<img alt="Kaizeras" src="https://avatars0.githubusercontent.com/u/6340189?v=3&s=60" width="60">](https://github.com/Kaizeras)[<img alt="mterwoord" src="https://avatars1.githubusercontent.com/u/114143?v=3&s=60" width="60">](https://github.com/mterwoord)[<img alt="michaeljota" src="https://avatars3.githubusercontent.com/u/10507776?v=3&s=60" width="60">](https://github.com/michaeljota)[<img alt="nstanard" src="https://avatars2.githubusercontent.com/u/4204806?v=3&s=60" width="60">](https://github.com/nstanard)[<img alt="myadhdoutlet" src="https://avatars0.githubusercontent.com/u/18659465?v=3&s=60" width="60">](https://github.com/myadhdoutlet)[<img alt="smith64fx" src="https://avatars0.githubusercontent.com/u/3246782?v=3&s=60" width="60">](https://github.com/smith64fx)
-
-[<img alt="swaheed2" src="https://avatars1.githubusercontent.com/u/8592912?v=3&s=60" width="60">](https://github.com/swaheed2)[<img alt="susovan87" src="https://avatars0.githubusercontent.com/u/1897814?v=3&s=60" width="60">](https://github.com/susovan87)[<img alt="ThomasDupuis" src="https://avatars2.githubusercontent.com/u/1278762?v=3&s=60" width="60">](https://github.com/ThomasDupuis)[<img alt="turnerguo" src="https://avatars3.githubusercontent.com/u/633880?v=3&s=60" width="60">](https://github.com/turnerguo)[<img alt="anhuisunfei" src="https://avatars0.githubusercontent.com/u/5771096?v=3&s=60" width="60">](https://github.com/anhuisunfei)[<img alt="blackholegalaxy" src="https://avatars3.githubusercontent.com/u/11064123?v=3&s=60" width="60">](https://github.com/blackholegalaxy)[<img alt="bnayalivne" src="https://avatars0.githubusercontent.com/u/20381085?v=3&s=60" width="60">](https://github.com/bnayalivne)[<img alt="dimkk" src="https://avatars0.githubusercontent.com/u/4674044?v=3&s=60" width="60">](https://github.com/dimkk)[<img alt="geekow" src="https://avatars2.githubusercontent.com/u/12011794?v=3&s=60" width="60">](https://github.com/geekow)[<img alt="greenkeeperio-bot" src="https://avatars2.githubusercontent.com/u/14790466?v=3&s=60" width="60">](https://github.com/greenkeeperio-bot)[<img alt="pluswave" src="https://avatars0.githubusercontent.com/u/5653443?v=3&s=60" width="60">](https://github.com/pluswave)[<img alt="Guutong" src="https://avatars3.githubusercontent.com/u/10181975?v=3&s=60" width="60">](https://github.com/Guutong)[<img alt="Deilan" src="https://avatars1.githubusercontent.com/u/4777512?v=3&s=60" width="60">](https://github.com/Deilan)
-
-### From akveo
-
-Enjoy :metal:
-We're always happy to receive your feedback!
-
-# Heroku setup
-Using this [buildpack](https://elements.heroku.com/buildpacks/devmynd/heroku-buildpack-angular-spa). Read also this [blog post](https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352) on how to deploy to Heroku.
-## Create application
-    $ heroku create netsweeper-ui --buildpack https://github.com/devmynd/heroku-buildpack-angular-spa.git
-## Setting buildpack explicitly
-    $ heroku buildpacks:set https://github.com/devmynd/heroku-buildpack-angular-spa.git -a netsweeper-ui
-	  $ heroku buildpacks:set heroku/nodejs -a netsweeper-ui
+<img src="https://d1ro8r1rbfn3jf.cloudfront.net/ms_89217/Y2rfvxMZhyD3xwo4rleYje5ixWJ9eF/Revert%2B%2522test%2Bcommit%2522%2Bby%2Bdvlasenko96%2B%25C2%25B7%2BPull%2BRequest%2B%25236%2B%25C2%25B7%2Bseniordevonly%252Fnetsweeper-ui%2B2017-07-31%2B15-34-28.png?Expires=1501594513&Signature=nhYoNf-w3inJoA9iKkeuIKWnk2godZsc8G7qUL3jmFcUu1kOuq-Afovth8ptcNbEyZdIGFMCFfi1mSaAFLmPYNs41DhKekUztE5JkbJWQtBCYO7bhS5DpxKpzLvSQlmwXOYPGtk9k8x4K4t3skvoyGQoo6ihDelh0cpNbavZYBZWGUo4S751SV0jlk1uPhTSBIcKv11G3Z1RA9SxTzRW0MRZ-KaBeTggJsyAIdQlmxFRGxS-Wl0nh~I6LF-pltZ6Sk6p65V7uKLxfksTVYMafyMtR7m3PY0sN8D9VYlv9aHlj6LCYo0IqSach7odHnK3Y7GgOc5cNgUNlFyojPMcMQ__&Key-Pair-Id=APKAJHEJJBIZWFB73RSA" height="200" />
 
 # JSON Server
 Documentation [here](https://github.com/typicode/json-server).
