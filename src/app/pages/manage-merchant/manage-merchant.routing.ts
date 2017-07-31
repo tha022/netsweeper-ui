@@ -5,7 +5,7 @@ import { ManageMerchantComponent } from './manage-merchant.component';
 const routes: Routes = [
   {
     path: '',
-    component: ManageMerchantComponent
+    component: ManageMerchantComponent,
   },
 ];
 
