@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { ConfigService } from '../../config/config.service';
 import { ManageMerchantService } from './manage-merchant.service';
 
 @Component({
@@ -8,60 +10,53 @@ import { ManageMerchantService } from './manage-merchant.service';
   styleUrls: ['./manage-merchant.component.scss'],
 })
 export class ManageMerchantComponent {
-    query: string = '';
+    clients: any;
 
-  settings = {
-    add: {
-      addButtonContent: '<i class="ion-ios-plus-outline"></i>',
-      createButtonContent: '<i class="ion-checkmark"></i>',
-      cancelButtonContent: '<i class="ion-close"></i>',
-    },
-    edit: {
-      editButtonContent: '<i class="ion-edit"></i>',
-      saveButtonContent: '<i class="ion-checkmark"></i>',
-      cancelButtonContent: '<i class="ion-close"></i>',
-    },
-    delete: {
-      deleteButtonContent: '<i class="ion-trash-a"></i>',
-      confirmDelete: true,
-    },
-    columns: {
-      id: {
-        title: 'ID',
-        type: 'string',
-      },
-      merchantName: {
-        title: 'Merchant Name',
-        type: 'string',
-      },
-      email: {
-        title: 'E-mail',
-        type: 'string',
-      },
-      phoneNumber: {
-        title: 'Phone Number',
-        type: 'string',
-      },
-      vatNumber: {
-        title: 'VAT Number',
-        type: 'string',
-      },
-    },
-  };
+  constructor(
+    private manageMerchantService: ManageMerchantService,
+    private config: ConfigService,
+    private route: Router,
+  ) {}
 
-  source: LocalDataSource = new LocalDataSource();
-
-   constructor(protected service: ManageMerchantService) {
-    this.service.getData().then((data) => {
-      this.source.load(data);
+  ngOnInit() {
+    this.manageMerchantService.getAllClients('merchants').subscribe(clients => {
+      this.clients = clients;
     });
   }
 
-  onDeleteConfirm(event): void {
-    if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve();
-    } else {
-      event.confirm.reject();
-    }
+  editClient(id: string): void {
+    this.route.navigateByUrl(`pages/users/${id}`);
   }
+
+  deleteClient(id: string): void {
+    this.manageMerchantService.deleteClient(this.config.taxUserPath, id).subscribe(v => {
+      this.manageMerchantService.getAllClients('merchants').subscribe(clients => {
+        this.clients = clients;
+      });
+    });
+  }
+    // edit: {
+    //   editButtonContent: '<i class="ion-edit"></i>',
+    //   saveButtonContent: '<i class="ion-checkmark"></i>',
+    //   cancelButtonContent: '<i class="ion-close"></i>',
+    // },
+    // delete: {
+    //   deleteButtonContent: '<i class="ion-trash-a"></i>',
+    //   confirmDelete: true,
+    // },
+    
+
+  //  constructor(protected service: ManageMerchantService) {
+  //   this.service.getData().then((data) => {
+  //     this.source.load(data);
+  //   });
+  // }
+
+  // onDeleteConfirm(event): void {
+  //   if (window.confirm('Are you sure you want to delete?')) {
+  //     event.confirm.resolve();
+  //   } else {
+  //     event.confirm.reject();
+  //   }
+  // }
 }

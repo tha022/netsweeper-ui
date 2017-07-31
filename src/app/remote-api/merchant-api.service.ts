@@ -20,11 +20,11 @@ export class MerchantAPIService {
     return this.httpService.get(path);
   }
 
-  deleteMerchant(path: string, id: number): Observable<Merchant> {
+  deleteMerchant(path: string, id: string): Observable<Merchant> {
     return this.httpService.delete(`${path}/${id}`);
   }
 
-  getMerchant(path: string, id: number): Observable<Merchant> {
+  getMerchant(path: string, id: string): Observable<Merchant> {
     return this.httpService.get(`${path}/${id}`);
   }
 

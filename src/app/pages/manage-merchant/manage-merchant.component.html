@@ -1,9 +1,27 @@
-<div class="widgets">
+<table class="table" *ngIf="clients">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Merchant Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>VAT Number</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let client of clients">
+      <td>{{ client.id }}</td>
+      <td>{{ client.merchantName }}</td>
+      <td>{{ client.email }}</td>
+      <td>{{ client.phone }}</td>
+      <td>{{ client.vat }}</td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="editClient(client.id)">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="deleteClient(client.id)">Delete</button>
+      </td>
+  </tr>
+</table>
 
-  <div class="row">
-    <ba-card  baCardClass="with-scroll" class="smart-table-container">
-      <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)"></ng2-smart-table>
-    </ba-card>
-  </div>
-
+<div *ngIf="!clients">
+  No clients
 </div>
