@@ -63,6 +63,18 @@ export const PAGES_MENU = [
             expanded: false
           }
         }
+      },
+      {
+        path: 'export-merchant',
+        data: {
+          menu: {
+            title: 'Export Merchant',
+            icon: 'fa fa-file-excel-o',
+            pathMatch: 'prefix',
+            selected: false,
+            expanded: false
+          }
+        }
       }
     ]
   }
