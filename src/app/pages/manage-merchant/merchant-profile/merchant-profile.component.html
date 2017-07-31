@@ -1,0 +1,145 @@
+<div class="row">
+    <div class="col-md-6 col-sm-10">
+        <form novalidate [formGroup]="merchantForm" (ngSubmit)="onChange()">
+            <div class="form-group" >
+                <label>Merchant Name</label>
+                <input class="form-control" type="text" name="merchantName" formControlName="merchantName" placeholder="Enter name" required>
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('merchantName').hasError('required') && merchantForm.get('merchantName').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>User Name</label>
+                <input class="form-control" type="text" formControlName="username" placeholder="Enter user name">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('username').hasError('required') && merchantForm.get('username').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>Merchant Email</label>
+                <input class="form-control" type="email" formControlName="email" placeholder="Enter e-mail">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('email').hasError('required') && merchantForm.get('email').touched">
+                    This field is required!
+                </p>
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('email').hasError('invalidEmailAddress') && merchantForm.get('email').touched">
+                    Seems like you entered a wrong email
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>Password</label>
+                <input class="form-control" type="password" formControlName="password" placeholder="Enter password">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('password').hasError('required') && merchantForm.get('password').touched">
+                    This field is required!
+                </p>
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('password').hasError('invalidPassword') && merchantForm.get('password').touched">
+                    Password must be longer than 6 characters and have at least one digit
+                </p>
+            </div>
+ 
+            <div class="form-group" >
+                <label>Address 1</label>
+                <input class="form-control" type="text" formControlName="adressOne" placeholder="Enter adress">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('adressOne').hasError('required') && merchantForm.get('adressOne').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>Address 2</label>
+                <input class="form-control" type="text" formControlName="adressTwo" placeholder="Enter adress">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('adressTwo').hasError('required') && merchantForm.get('adressTwo').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>City</label>
+                <input class="form-control" type="text" formControlName="city" placeholder="Enter city">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('city').hasError('required') && merchantForm.get('city').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>State</label>
+                <input class="form-control" type="text" formControlName="state" placeholder="Enter state">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('state').hasError('required') && merchantForm.get('state').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>Postal ZIP</label>
+                <input class="form-control" type="text" formControlName="postal" placeholder="Enter postal ZIP">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('postal').hasError('required') && merchantForm.get('postal').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>Country</label>
+                <input class="form-control" type="text" formControlName="country" placeholder="Enter country">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('country').hasError('required') && merchantForm.get('country').touched">
+                    This field is required!
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>Phone Number</label>
+                <input class="form-control" type="tel" formControlName="phone" placeholder="Enter phone number">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('phone').hasError('required') && merchantForm.get('phone').touched">
+                    This field is required!
+                </p>
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('phone').hasError('invalidPhone') && merchantForm.get('phone').touched">
+                    Phone number must contain only 10 digits
+                </p>
+            </div>
+
+            <div class="form-group" >
+                <label>VAT Number</label>
+                <input class="form-control" type="text" formControlName="vat" placeholder="Enter VAT numer">
+                <p 
+                    class="error" 
+                    *ngIf="merchantForm.get('vat').hasError('required') && merchantForm.get('vat').touched">
+                    This field is required!
+                </p>
+            </div> 
+            
+            <button type="submit" [disabled]="!merchantForm.valid" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+
