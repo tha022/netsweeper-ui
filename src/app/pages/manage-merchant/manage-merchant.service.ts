@@ -174,13 +174,9 @@ export class ManageMerchantService {
   }
 
   // getMerchants() : Observable<Comment[]> {
-
   //        // ...using get request
-  //        return this.http.get(this.commentsUrl)
-  //                       // ...and calling .json() on the response to return data
+  //        return this.http.get(this.merchantsUrl)
   //                        .map((res:Response) => res.json())
-  //                        //...errors if any
   //                        .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-
   //    }
 }
