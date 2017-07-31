@@ -6,7 +6,7 @@ import { MerchantProfileComponent } from './merchant-profile/merchant-profile.co
 const routes: Routes = [
   {
     path: '',
-    component: ManageMerchantComponent
+    component: ManageMerchantComponent,
   },
   {
     path: ':id',
