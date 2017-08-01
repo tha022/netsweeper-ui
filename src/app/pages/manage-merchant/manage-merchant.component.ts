@@ -25,11 +25,11 @@ export class ManageMerchantComponent {
   }
 
   editClient(id: string): void {
-    this.route.navigateByUrl(`pages/users/${id}`);
+    this.route.navigateByUrl(`pages/merchants/${id}`);
   }
 
   deleteClient(id: string): void {
-    this.manageMerchantService.deleteClient(this.config.taxUserPath, id).subscribe(v => {
+    this.manageMerchantService.deleteClient(this.config.merchantPath, id).subscribe(v => {
       this.manageMerchantService.getAllClients('merchants').subscribe(clients => {
         this.clients = clients;
       });

@@ -63,44 +63,5 @@ export class MerchantProfileComponent implements OnInit {
           error => alert(`${error.status} ${error.error}`),
           () => alert('Merchant is successfully updated'),
       );
-    //   const formData = this.merchantForm.value;
-
-    //   const merchantName = formData.merchantName,
-    //     username = formData.username,
-    //     email = formData.email,
-    //     password = formData.password,
-        // adressOne = formData.adressOne,
-        // adressTwo = formData.adresstwo,
-        // city = formData.city,
-        // state = formData.state,
-        // postal = formData.postal,
-        // country = formData.country,
-        // phone = formData.phone,
-        // vat = formData.vat,
-    //     id = String(Date.now());
-      
-    //   const merchant = { 
-    //     id,
-    //     merchantName, 
-    //     username, 
-    //     email, 
-    //     password, 
-        // adressOne, 
-        // adressTwo, 
-        // city, 
-        // state, 
-        // postal, 
-        // country, 
-        // phone, 
-        // vat, 
-    //   };
-
-    //   this.addMerchantService.addMerchant(merchant)
-    //     .subscribe(
-    //       data => console.log(JSON.stringify(data)),
-    //       error => alert(`${error.status} ${error.error}`),
-    //       () => alert('Merchant is successfully saved'),
-    //     );
-
     }
 }

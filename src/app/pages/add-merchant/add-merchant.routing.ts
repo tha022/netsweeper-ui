@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: AddMerchantComponent,
   },
+  { 
+    path: '**', 
+    redirectTo: 'add' 
+  },
 ];
 
 export const routing = RouterModule.forChild(routes);
