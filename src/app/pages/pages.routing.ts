@@ -20,10 +20,10 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
-      { path: 'add-merchant', loadChildren: './add-merchant/add-merchant.module#AddMerchantModule' },
+      { path: 'merchant', loadChildren: './add-merchant/add-merchant.module#AddMerchantModule' },
+      { path: 'merchants', loadChildren: './manage-merchant/manage-merchant.module#ManageMerchantModule' },
       { path: 'user', loadChildren: './add-tax-user/add-tax-user.module#AddTaxUserModule' },
       { path: 'users', loadChildren: './manage-tax-users/manage-tax-users.module#ManageTaxUserModule' },
-      { path: 'manage-merchant', loadChildren: './manage-merchant/manage-merchant.module#ManageMerchantModule' },
       { path: 'export-merchant', loadChildren: './export-merchant/export-merchant.module#ExportMerchantModule' },
       // { path: 'editors', loadChildren: './editors/editors.module#EditorsModule' },
       // { path: 'components', loadChildren: './components/components.module#ComponentsModule' },

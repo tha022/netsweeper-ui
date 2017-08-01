@@ -17,6 +17,7 @@
     "rimraf": "rimraf",
     "changelog": "standard-changelog",
     "start": "node server.js",
+    "startproxy": "ng serve --proxy-config proxy.conf.json",
     "start:hmr": "ng serve --hmr",
     "start:aot": "ng serve --aot",
     "start:prod": "ng serve --prod",
