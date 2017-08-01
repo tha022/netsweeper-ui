@@ -8,21 +8,17 @@ import { ManageTaxUserComponent } from './manage-tax-users.component';
 import { ManageTaxUserService } from './manage-tax-users.service';
 import { TaxUserProfileComponent } from './tax-user-profile/tax-user-profile.component';
 import { TaxUserServiceProfile } from './tax-user-profile/tax-user-profile.service';
+import { ManageComponent } from './manage.component';
 import { routing } from './manage-tax-users.routing';
-import { DialogModule } from '../shared/dialog/dialog.module';
 
 @NgModule({
   imports: [
     CommonModule,
     TablesModule,
     ReactiveFormsModule,
-    routing,
-    DialogModule
+    routing
   ],
-  declarations: [
-    ManageTaxUserComponent,
-    TaxUserProfileComponent
-  ],
+  declarations: [ManageTaxUserComponent, TaxUserProfileComponent, ManageComponent],
   providers: [ManageTaxUserService, TaxUserServiceProfile]
 })
 export class ManageTaxUserModule {}

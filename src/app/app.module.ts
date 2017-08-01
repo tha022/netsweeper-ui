@@ -19,7 +19,6 @@ import { PagesModule } from './pages/pages.module';
 
 import { ConfigService } from './config';
 import { RemoteAPIModule } from './remote-api/remote-api.module';
-import { DialogModule } from './pages/shared/dialog/dialog.module';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -51,8 +50,7 @@ export type StoreType = {
     NgbModule.forRoot(),
     PagesModule,
     routing,
-    RemoteAPIModule.forRoot(),
-    DialogModule.forRoot()
+    RemoteAPIModule.forRoot()
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     APP_PROVIDERS,
