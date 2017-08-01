@@ -44,6 +44,13 @@ When pull request was created, you should add reviewers. After you have got revi
 
 <img src="https://d1ro8r1rbfn3jf.cloudfront.net/ms_89217/Y2rfvxMZhyD3xwo4rleYje5ixWJ9eF/Revert%2B%2522test%2Bcommit%2522%2Bby%2Bdvlasenko96%2B%25C2%25B7%2BPull%2BRequest%2B%25236%2B%25C2%25B7%2Bseniordevonly%252Fnetsweeper-ui%2B2017-07-31%2B15-34-28.png?Expires=1501594513&Signature=nhYoNf-w3inJoA9iKkeuIKWnk2godZsc8G7qUL3jmFcUu1kOuq-Afovth8ptcNbEyZdIGFMCFfi1mSaAFLmPYNs41DhKekUztE5JkbJWQtBCYO7bhS5DpxKpzLvSQlmwXOYPGtk9k8x4K4t3skvoyGQoo6ihDelh0cpNbavZYBZWGUo4S751SV0jlk1uPhTSBIcKv11G3Z1RA9SxTzRW0MRZ-KaBeTggJsyAIdQlmxFRGxS-Wl0nh~I6LF-pltZ6Sk6p65V7uKLxfksTVYMafyMtR7m3PY0sN8D9VYlv9aHlj6LCYo0IqSach7odHnK3Y7GgOc5cNgUNlFyojPMcMQ__&Key-Pair-Id=APKAJHEJJBIZWFB73RSA" height="200" />
 
+## Dependencies
+Very good Stackoverflow [article](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies)
+
+### Install without devDependencies
+    $ npm install --production
+    $ /Users/vervik/.nvm/versions/node/v6.11.0/bin
+
 # JSON Server
 Documentation [here](https://github.com/typicode/json-server).
 All files related to DB is in db/ folder
@@ -51,3 +58,6 @@ All files related to DB is in db/ folder
     $ npm install -g json-server
 ## Start Server
     $ json-server --watch db.json
+
+## Heroku
+Read this [article](https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352)
