@@ -15,7 +15,7 @@ export const PAGES_MENU = [
         },
       },
       {
-        path: 'add-merchant',  // path for our page
+        path: 'merchant',  // path for our page
         data: { // custom menu declaration
           menu: {
             title: 'Add New Merchant', // menu title
@@ -28,10 +28,10 @@ export const PAGES_MENU = [
         },
       },
       {
-        path: 'manage-merchant',  // path for our page
+        path: 'merchants',  // path for our page
         data: { // custom menu declaration
           menu: {
-            title: 'Manage Merchant', // menu title
+            title: 'Manage Merchants', // menu title
             icon: 'ion-compose', // menu icon
             pathMatch: 'prefix', // use it if item children not displayed in menu
             selected: false,
