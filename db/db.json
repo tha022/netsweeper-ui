@@ -1,55 +1,8 @@
 {
   "merchants": [
-    {
-      "id": "1500994722387",
-      "merchantName": "merchant 9 v1",
-      "username": "user 9",
-      "email": "email9@gmail.com",
-      "password": "123345user9",
-      "adressOne": "ad1",
-      "city": "Kyiv",
-      "state": "Kyiv",
-      "postal": "01001",
-      "country": "Ukrane",
-      "phone": "1234567890",
-      "vat": "123",
-      "adressTwo": "ad2"
-    },
-    {
-      "id": "1500994744373",
-      "merchantName": "merchant 9",
-      "username": "user 9",
-      "email": "email@gmail.com",
-      "password": "123",
-      "adressOne": "ad1",
-      "city": "Kyiv",
-      "state": "Kyiv",
-      "postal": "01001",
-      "country": "Ukrane",
-      "phone": "123",
-      "vat": "123"
-    },
-    {
-      "id": "1501596161518",
-      "merchantName": "fghfgh",
-      "username": "fghfgh",
-      "email": "dfgdfg@dfdsf.com",
-      "password": "123456"
-    },
-    {
-      "id": "1501596794425",
-      "merchantName": "dfdsf",
-      "username": "dfsdfsfd",
-      "email": "sdfsdf!dsfd@dfddf.com",
-      "password": "123456"
-    },
-    {
-      "id": "1501596799416",
-      "merchantName": "dfdsf",
-      "username": "dfsdfsfd",
-      "email": "sdfsdf!dsfd@dfddf.com",
-      "password": "123456"
-    }
+    
   ],
-  "taxusers": []
+  "taxusers": [
+    
+  ]
 }

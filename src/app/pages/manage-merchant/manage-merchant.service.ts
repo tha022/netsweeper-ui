@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 import { Merchant } from '../shared/models/merchant';
 import { MerchantAPIService } from '../../remote-api/merchant-api.service';
 
 @Injectable()
 export class ManageMerchantService {
+
+  clientsUpdated: Subject<any> = new Subject<any>();
   
   constructor(
     private merchantAPIService: MerchantAPIService

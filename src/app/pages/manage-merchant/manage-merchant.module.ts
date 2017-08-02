@@ -1,9 +1,11 @@
 
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { routing } from './manage-merchant.routing';
+
+import { DialogModule } from '../shared/dialog/dialog.module';
 
 import { MerchantProfileComponent } from './merchant-profile/merchant-profile.component';
 import { ManageMerchantComponent } from './manage-merchant.component';
@@ -16,14 +18,21 @@ import { ManageMerchantService } from './manage-merchant.service';
     CommonModule,
     ReactiveFormsModule,
     routing,   
+    DialogModule,
   ],
   declarations: [
     MerchantProfileComponent,
     ManageMerchantComponent,
   ],
-  providers: [ 
-    MerchantProfileService,
-    ManageMerchantService,
-  ],
 })
-export class ManageMerchantModule {}
+export class ManageMerchantModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: ManageMerchantModule,
+      providers: [
+        ManageMerchantService, 
+        MerchantProfileService,
+      ],
+    };
+  }
+}
