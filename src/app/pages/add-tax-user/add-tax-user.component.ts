@@ -9,12 +9,11 @@ import { ConfigService } from '../../config/config.service';
 import { TaxUser } from '../../pages/shared/models/tax-user';
 
 @Component({
-  selector: 'add-tax-user', // TODO: create name for app
+  selector: 'add-tax-user',
   templateUrl: './add-tax-user.component.html',
   styleUrls: ['./add-tax-user.component.css']
 })
 export class AddTaxUserComponent implements OnInit {
-
   taxUserForm: FormGroup;
   taxUser: TaxUser;
 
@@ -29,21 +28,23 @@ export class AddTaxUserComponent implements OnInit {
       'taxOfficerName': ['', this.customCharValidator()],
       'taxUserName': ['', this.customCharValidator()],
       'taxUserEmail': new FormControl('', EmailValidator.validate),
-      'taxUserPassword': ['', Validators.pattern(this.config.strongPassword)],
-      'taxAddressOne': ['', this.customCharValidator()],
-      'taxAddressTwo': ['', this.customCharValidator()],
-      'taxUserCity': ['', this.customCharValidator()],
-      'taxUserState': ['', this.customCharValidator()],
-      'taxUserZip': ['', Validators.pattern('[0-9]{5}')],
-      'taxUserCountry': ['', this.customCharValidator()],
-      'taxUserPhone': ['', Validators.pattern('[0-9]{12}')]
+      'taxUserPassword': ['', this.customPasswordValidator()]
     });
   }
-  // TODO: add type of return
+
+  // TODO: remove in future with validators from theme/validators
   customCharValidator(): any {
     return Validators.compose([
       Validators.required,
       Validators.pattern(/^[a-zA-Z0-9_ ]*$/i)
+    ]);
+  }
+
+  // TODO: remove in future with validators from theme/validators
+  customPasswordValidator(): any {
+    return Validators.compose([
+      Validators.required,
+      Validators.pattern(this.config.strongPassword)
     ]);
   }
 
