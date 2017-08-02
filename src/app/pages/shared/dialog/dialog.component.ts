@@ -5,7 +5,7 @@ import { DialogAnchorDirective } from './dialog.directive';
 import { DialogService } from './dialog.service';
 
 @Component({
-  selector: 'dlg',
+  selector: 'dialog-message',
   templateUrl: './dialog.component.html'
 })
 export class DialogComponent implements OnInit {

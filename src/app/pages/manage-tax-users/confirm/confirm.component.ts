@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-
 import { Observable } from 'rxjs/Observable';
+
 import { DialogService } from '../../shared/dialog/dialog.service';
 import { ManageTaxUserService } from '../manage-tax-users.service';
 import { ConfigService } from '../../../config/config.service';
@@ -26,11 +26,9 @@ export class ConfirmationComponent {
   confirmDialog() {
     const id = this['data'].id;
 
-    this.manageService.deleteClient(this.config.taxUserPath, id).subscribe(() => {
-      this.manageService.getAllClients(this.config.taxUserPath).subscribe(clients => {
-        this.manageService.clientsUpdated.next(clients);
-      });
-    });
+    this.manageService.deleteClient(this.config.taxUserPath, id)
+      .flatMapTo(this.manageService.getAllClients(this.config.taxUserPath))
+      .subscribe(clients => this.manageService.clientsUpdated.next(clients));
 
     this.dialogService.hideDialog();
   }

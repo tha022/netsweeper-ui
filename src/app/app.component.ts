@@ -17,6 +17,7 @@ import { layoutPaths } from './theme/theme.constants';
     <main [class.menu-collapsed]="isMenuCollapsed" baThemeRun>
       <div class="additional-bg"></div>
       <router-outlet></router-outlet>
+      <dialog-message></dialog-message>
     </main>
   `
 })

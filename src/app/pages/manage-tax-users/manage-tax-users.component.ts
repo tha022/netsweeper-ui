@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs/Subject';
 
 import { ManageTaxUserService } from './manage-tax-users.service';
 import { ConfigService } from '../../config/config.service';
@@ -9,10 +10,10 @@ import { ConfirmationComponent } from './confirm/confirm.component';
 @Component({
   selector: 'manage-tax-user',
   templateUrl: './manage-tax-users.component.html',
-  styleUrls: ['./manage-tax-users.component.css'],
-  entryComponents: [ConfirmationComponent]
+  styleUrls: ['./manage-tax-users.component.css']
 })
-export class ManageTaxUserComponent implements OnInit {
+export class ManageTaxUserComponent implements OnInit, OnDestroy {
+  unsubscribe: Subject<any> = new Subject<any>();
   clients: any;
 
   constructor(
@@ -24,6 +25,7 @@ export class ManageTaxUserComponent implements OnInit {
 
   ngOnInit() {
     this.manageTaxUserService.getAllClients(this.config.taxUserPath)
+      .takeUntil(this.unsubscribe)
       .subscribe(clients => {
         this.clients = clients;
       });
@@ -36,8 +38,15 @@ export class ManageTaxUserComponent implements OnInit {
   deleteClient(id: number): void {
     this.dialogService.showDialog(ConfirmationComponent, { id });
 
-    this.manageTaxUserService.clientsUpdated.subscribe(clients => {
-      this.clients = clients;
-    });
+    this.manageTaxUserService.clientsUpdated
+      .takeUntil(this.unsubscribe)
+      .subscribe(clients => {
+        this.clients = clients;
+      });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 }

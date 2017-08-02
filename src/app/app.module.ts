@@ -16,10 +16,11 @@ import { AppState, InternalStateType } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
+import { DialogModule } from './pages/shared/dialog/dialog.module';
+import { RemoteAPIModule } from './remote-api/remote-api.module';
 
 import { ConfigService } from './config';
-import { RemoteAPIModule } from './remote-api/remote-api.module';
-import { DialogModule } from './pages/shared/dialog/dialog.module';
+import { ConfirmationComponent } from './pages/manage-tax-users/confirm/confirm.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -58,8 +59,8 @@ export type StoreType = {
     APP_PROVIDERS,
     ConfigService
   ],
+  entryComponents: [ConfirmationComponent]
 })
-
 export class AppModule {
 
   constructor(public appState: AppState) {
