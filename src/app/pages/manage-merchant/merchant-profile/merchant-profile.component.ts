@@ -9,6 +9,8 @@ import { Merchant } from '../../../pages/shared/models/merchant';
 import { MerchantProfileService } from './merchant-profile.service';
 import { MerchantAPIService } from '../../../remote-api/merchant-api.service';
 
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'merchant-profile',
   templateUrl: './merchant-profile.component.html',
@@ -37,12 +39,12 @@ export class MerchantProfileComponent implements OnInit {
       password: ['', [Validators.required, ValidationService.passwordValidator]],
       adressOne: [''],
       adressTwo: [''],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
+      city: [''],
+      state: [''],
       postal: [''],
-      country: ['', Validators.required],
-      phone: ['', [Validators.required, ValidationService.phoneValidator]],
-      vat: ['', Validators.required],
+      country: [''],
+      phone: [''],
+      vat: [''],
     });
 
     this.route.params.subscribe(url => {
@@ -54,14 +56,12 @@ export class MerchantProfileComponent implements OnInit {
   }
 
   onChange(): void {
-
     const merchant: Merchant = this.merchantForm.value;
     this.merchantProfileService
       .updateMerchant(`${this.config.merchantPath}/${this.id}`, merchant)
-      .subscribe(
-          data => console.log(JSON.stringify(data)),
-          error => alert(`${error.status} ${error.error}`),
-          () => alert('Merchant is successfully updated'),
-      );
+      .subscribe(response => {
+        alert('Merchant is successfully updated');
+        this.router.navigateByUrl('pages/merchants');
+      });
     }
 }
