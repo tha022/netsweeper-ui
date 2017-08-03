@@ -60,7 +60,6 @@ export class MerchantProfileComponent implements OnInit {
     this.merchantProfileService
       .updateMerchant(`${this.config.merchantPath}/${this.id}`, merchant)
       .subscribe(response => {
-        alert('Merchant is successfully updated');
         this.router.navigateByUrl('pages/merchants');
       });
     }

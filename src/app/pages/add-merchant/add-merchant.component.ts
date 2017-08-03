@@ -51,7 +51,6 @@ export class AddMerchantComponent implements OnInit {
 
       this.addMerchantService.addMerchant(merchant)
         .subscribe(response => {
-          alert('Merchant is successfully saved');
           this.addMerchantForm.reset();
         } 
       );
