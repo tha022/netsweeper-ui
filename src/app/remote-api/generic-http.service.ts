@@ -35,7 +35,6 @@ export class GenericHttpService {
   }
 
   post(path: string, body: Object = {}): Observable<any> {
-    // const fullPath: string = `${this.apiPath}/${path}`;
     const fullPath: string = `/api/${path}`;
     const jsonBody: string = JSON.stringify(body);
     const options: RequestOptions = new RequestOptions({
@@ -49,7 +48,6 @@ export class GenericHttpService {
   }
 
   delete(path: string, searchParams: Object = {}): Observable<any> {
-    // const fullPath: string = `${this.apiPath}/${path}`;
     const fullPath: string = `/api/${path}`;
 
     let params: URLSearchParams = new URLSearchParams(),
@@ -71,8 +69,7 @@ export class GenericHttpService {
   }
 
   patch(path: string, params: Object = {}) {
-    // let fullPath: string = `${this.apiPath}/${path}`;
-    let fullPath: string = `/api/${path}`;
+    const fullPath: string = `/api/${path}`;
     let body = JSON.stringify(params);
     let options: RequestOptions = new RequestOptions({
       headers: this.shapeHeaders(this.headers)
@@ -84,8 +81,7 @@ export class GenericHttpService {
   }
 
   get(path: string, searchParams: Object = {}): Observable<any> {
-    //let fullPath: string = `${this.apiPath}/${path}`;
-    let fullPath: string = `/api/${path}`;
+    const fullPath: string = `/api/${path}`;
 
     console.log(fullPath);
     let params: URLSearchParams = new URLSearchParams(),
@@ -107,7 +103,6 @@ export class GenericHttpService {
   }
 
   put(path: string, body: Object = {}): Observable<any> {
-    // const fullPath: string = `${this.apiPath}/${path}`;
     const fullPath: string = `/api/${path}`;
 
     let jsonBody: string = JSON.stringify(body),

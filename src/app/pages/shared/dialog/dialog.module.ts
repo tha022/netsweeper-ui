@@ -1,18 +1,25 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { DialogComponent } from './dialog.component';
 import { ConfirmationComponent } from '../../manage-tax-users/confirm/confirm.component';
+import { ConfirmDeleteComponent } from '../../manage-merchant/confirm-delete/confirm-delete.component';
+
+import { DialogComponent } from './dialog.component';
 import { DialogService } from './dialog.service';
+import { DialogAnchorDirective } from './dialog.directive';
+
 import { ManageTaxUserService } from '../../manage-tax-users/manage-tax-users.service';
 import { TaxUserProfileService } from '../../manage-tax-users/tax-user-profile/tax-user-profile.service';
-import { DialogAnchorDirective } from './dialog.directive';
+
+import { ManageMerchantService } from '../../manage-merchant/manage-merchant.service';
+import { MerchantProfileService } from '../../manage-merchant/merchant-profile/merchant-profile.service';
 
 @NgModule({
   exports: [DialogComponent],
   declarations: [
     DialogComponent,
     DialogAnchorDirective,
-    ConfirmationComponent
+    ConfirmationComponent,
+    ConfirmDeleteComponent
   ],
 })
 export class DialogModule {
@@ -22,7 +29,9 @@ export class DialogModule {
       providers: [
         DialogService,
         ManageTaxUserService,
-        TaxUserProfileService
+        TaxUserProfileService,
+        ManageMerchantService,
+        MerchantProfileService,
       ]
     };
   }

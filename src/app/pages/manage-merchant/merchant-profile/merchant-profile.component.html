@@ -54,21 +54,11 @@
             <div class="form-group" >
                 <label>Address 1</label>
                 <input class="form-control" type="text" formControlName="adressOne" placeholder="Enter adress">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('adressOne').hasError('required') && merchantForm.get('adressOne').touched">
-                    This field is required!
-                </p>
             </div>
 
             <div class="form-group" >
                 <label>Address 2</label>
                 <input class="form-control" type="text" formControlName="adressTwo" placeholder="Enter adress">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('adressTwo').hasError('required') && merchantForm.get('adressTwo').touched">
-                    This field is required!
-                </p>
             </div>
 
             <div class="form-group" >
@@ -94,11 +84,6 @@
             <div class="form-group" >
                 <label>Postal ZIP</label>
                 <input class="form-control" type="text" formControlName="postal" placeholder="Enter postal ZIP">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('postal').hasError('required') && merchantForm.get('postal').touched">
-                    This field is required!
-                </p>
             </div>
 
             <div class="form-group" >

@@ -21,6 +21,7 @@ import { RemoteAPIModule } from './remote-api/remote-api.module';
 
 import { ConfigService } from './config';
 import { ConfirmationComponent } from './pages/manage-tax-users/confirm/confirm.component';
+import { ConfirmDeleteComponent } from './pages/manage-merchant/confirm-delete/confirm-delete.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -59,7 +60,10 @@ export type StoreType = {
     APP_PROVIDERS,
     ConfigService
   ],
-  entryComponents: [ConfirmationComponent]
+  entryComponents: [
+    ConfirmationComponent,
+    ConfirmDeleteComponent,
+    ]
 })
 export class AppModule {
 
