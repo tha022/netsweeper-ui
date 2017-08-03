@@ -8,7 +8,7 @@ import { ConfigService } from '../../../config/config.service';
 @Component({
   selector: 'confirm-dialog',
   templateUrl: './confirm.component.html',
-  styleUrls: ['./confirm.component.css']
+  styleUrls: ['./confirm.component.scss']
 })
 
 export class ConfirmationComponent {
