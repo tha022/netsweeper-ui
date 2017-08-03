@@ -5,13 +5,13 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 import { TaxUserAPIService } from '../../../remote-api/tax-user-api.service';
 import { ConfigService } from '../../../config/config.service';
 import { TaxUser } from '../../../pages/shared/models/tax-user';
-import { EmailValidator } from '../../../theme/validators/email.validator';
-import { EqualPasswordsValidator } from '../../../theme/validators/equalPasswords.validator';
 import { TaxUserProfileService } from './tax-user-profile.service';
+import { ValidationService } from '../../shared/services/validation.service';
 
 @Component({
   selector: 'tax-user-profile',
-  templateUrl: './tax-user-profile.component.html'
+  templateUrl: './tax-user-profile.component.html',
+  styleUrls: ['./tax-user-profile.component.css']
 })
 
 export class TaxUserProfileComponent implements OnInit {
@@ -21,6 +21,7 @@ export class TaxUserProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private config: ConfigService,
     private taxUserAPIService: TaxUserAPIService,
     private formBuilder: FormBuilder,
@@ -29,10 +30,17 @@ export class TaxUserProfileComponent implements OnInit {
 
   ngOnInit() {
     this.taxUserForm = this.formBuilder.group({
-      'taxOfficerName': ['', this.customCharValidator()],
-      'taxUserName': ['', this.customCharValidator()],
-      'taxUserEmail': new FormControl('', EmailValidator.validate),
-      'taxUserPassword': ['', Validators.pattern(this.config.strongPassword)]
+      'taxOfficerName': ['', Validators.required],
+      'taxUserName': ['', Validators.required],
+      'taxUserEmail': ['', [Validators.required, ValidationService.emailValidator]],
+      'taxUserPassword': ['', [Validators.required, ValidationService.passwordValidator]],
+      'taxAddressOne': [''],
+      'taxAddressTwo': [''],
+      'taxUserCity': [''],
+      'taxUserState': [''],
+      'taxUserZip': [''],
+      'taxUserCountry': [''],
+      'taxUserPhone': ['']
     });
 
     this.route.params.subscribe(url => {
@@ -56,7 +64,9 @@ export class TaxUserProfileComponent implements OnInit {
     const taxUser: TaxUser = this.taxUserForm.value;
     this.taxUserServiceProfile
       .updateTaxUser(`${this.config.taxUserPath}/${this.id}`, taxUser)
-      .subscribe();
+      .subscribe(response => {
+        this.router.navigateByUrl(this.config.usersPath);
+      });
   }
 }
 
