@@ -64,21 +64,11 @@
             <div class="form-group" >
                 <label>City</label>
                 <input class="form-control" type="text" formControlName="city" placeholder="Enter city">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('city').hasError('required') && merchantForm.get('city').touched">
-                    This field is required!
-                </p>
             </div>
 
             <div class="form-group" >
                 <label>State</label>
                 <input class="form-control" type="text" formControlName="state" placeholder="Enter state">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('state').hasError('required') && merchantForm.get('state').touched">
-                    This field is required!
-                </p>
             </div>
 
             <div class="form-group" >
@@ -89,36 +79,16 @@
             <div class="form-group" >
                 <label>Country</label>
                 <input class="form-control" type="text" formControlName="country" placeholder="Enter country">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('country').hasError('required') && merchantForm.get('country').touched">
-                    This field is required!
-                </p>
             </div>
 
             <div class="form-group" >
                 <label>Phone Number</label>
                 <input class="form-control" type="tel" formControlName="phone" placeholder="Enter phone number">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('phone').hasError('required') && merchantForm.get('phone').touched">
-                    This field is required!
-                </p>
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('phone').hasError('invalidPhone') && merchantForm.get('phone').touched">
-                    Phone number must contain only 10 digits
-                </p>
             </div>
 
             <div class="form-group" >
                 <label>VAT Number</label>
                 <input class="form-control" type="text" formControlName="vat" placeholder="Enter VAT numer">
-                <p 
-                    class="error" 
-                    *ngIf="merchantForm.get('vat').hasError('required') && merchantForm.get('vat').touched">
-                    This field is required!
-                </p>
             </div> 
             
             <button type="submit" [disabled]="!merchantForm.valid" class="btn btn-primary">Submit</button>
