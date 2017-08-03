@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
-import { EmailValidator } from '../../theme/validators/email.validator';
-import { EqualPasswordsValidator } from '../../theme/validators/equalPasswords.validator';
-
+import { ValidationService } from '../shared/services/validation.service';
 import { AddTaxUserService } from './add-tax-user.service';
 import { ConfigService } from '../../config/config.service';
 import { TaxUser } from '../../pages/shared/models/tax-user';
@@ -25,10 +23,10 @@ export class AddTaxUserComponent implements OnInit {
 
   ngOnInit() {
     this.taxUserForm = this.formBuilder.group({
-      'taxOfficerName': ['', this.customCharValidator()],
-      'taxUserName': ['', this.customCharValidator()],
-      'taxUserEmail': new FormControl('', EmailValidator.validate),
-      'taxUserPassword': ['', this.customPasswordValidator()]
+      'taxOfficerName': ['', Validators.required],
+      'taxUserName': ['', Validators.required],
+      'taxUserEmail': ['', [Validators.required, ValidationService.emailValidator]],
+      'taxUserPassword': ['', [Validators.required, ValidationService.passwordValidator]]
     });
   }
 

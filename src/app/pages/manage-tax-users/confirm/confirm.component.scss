@@ -1,0 +1,25 @@
+.dialog {
+  width: 260px;
+  height: 120px;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: fixed;
+  left: calc(50% - 125px);
+  top: 100px;
+  p {
+    margin: 20px;
+    text-align: center;
+    color: #545454;
+  }
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      margin: 0 5px;
+    }
+  }
+}
