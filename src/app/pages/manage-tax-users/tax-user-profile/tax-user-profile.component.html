@@ -1,63 +1,116 @@
 <div class="row">
-    <div class="col-md-6 col-sm-10">
-        <form [formGroup]="taxUserForm" (ngSubmit)="submit()">
-            <div class="form-group" >
-                <label for="name">Tax Officer Name</label>
-                <input class="form-control" type="text" name=""
-                placeholder="Enter name" id="name"
-                formControlName="taxOfficerName">
+  <div class="col-md-6 col-sm-10">
+    <form novalidate [formGroup]="taxUserForm" (ngSubmit)="submit()">
+      <div class="form-group" >
+        <label for="name">Tax Officer Name</label>
+        <input class="form-control" type="text" name=""
+        placeholder="Enter name" id="name"
+        formControlName="taxOfficerName">
 
-                <div class="alert alert-danger"
-                    *ngIf="taxUserForm.controls['taxOfficerName'].invalid &&
-                    taxUserForm.controls['taxOfficerName'].touched">
-                    Enter a correct officer name
-                </div>
+        <p class="error"
+          *ngIf="taxUserForm.get('taxOfficerName').hasError('required') && taxUserForm.get('taxOfficerName').touched">
+            Field required
+        </p>
+      </div>
 
-            </div>
+      <div class="form-group">
+        <label>User Name</label>
+        <input class="form-control" type="text"
+        placeholder="Enter user name"
+        formControlName="taxUserName">
 
-            <div class="form-group" >
-                <label>User Name</label>
-                <input class="form-control" type="text"
-                placeholder="Enter user name"
-                formControlName="taxUserName">
+        <p class="error"
+            *ngIf="taxUserForm.get('taxUserName').hasError('required') && taxUserForm.get('taxUserName').touched">
+              This field is required!
+        </p>
+      </div>
 
-                <div class="alert alert-danger"
-                    *ngIf="taxUserForm.controls['taxUserName'].invalid &&
-                    taxUserForm.controls['taxUserName'].touched">
-                    Enter a correct name
-                </div>
-            </div>
+      <div class="form-group" >
+        <label>Tax User Email</label>
+        <input class="form-control" type="email"
+        placeholder="Enter e-mail"
+        formControlName="taxUserEmail">
 
-            <div class="form-group" >
-                <label>Tax User Email</label>
-                <input class="form-control" type="email"
-                placeholder="Enter e-mail"
-                formControlName="taxUserEmail">
+        <p class="error"
+            *ngIf="taxUserForm.get('taxUserEmail').hasError('required') && taxUserForm.get('taxUserEmail').touched">
+            This field is required!
+        </p>
 
-                <div class="alert alert-danger"
-                    *ngIf="taxUserForm.controls['taxUserEmail'].invalid &&
-                    taxUserForm.controls['taxUserEmail'].touched">
-                    Enter a correct email
-                </div>
-            </div>
+        <p class="error"
+            *ngIf="taxUserForm.get('taxUserEmail').hasError('invalidEmailAddress') &&
+            taxUserForm.get('taxUserEmail').touched">
+              Seems like you entered a wrong email
+        </p>
+      </div>
 
-            <div class="form-group" >
-                <label>Password</label>
-                <input class="form-control" type="password"
-                placeholder="Enter password"
-                formControlName="taxUserPassword">
-                
-                <div class="alert alert-danger"
-                    *ngIf="taxUserForm.controls['taxUserPassword'].invalid &&
-                    taxUserForm.controls['taxUserPassword'].touched">
-                    Enter a correct password
-                </div>
-            </div>
+      <div class="form-group" >
+        <label>Password</label>
+        <input class="form-control" type="password"
+        placeholder="Enter password"
+        formControlName="taxUserPassword">
 
-             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+        <p class="error"
+          *ngIf="taxUserForm.get('taxUserPassword').hasError('required') && taxUserForm.get('taxUserPassword').touched">
+            This field is required!
+        </p>
+
+        <p class="error"
+          *ngIf="taxUserForm.get('taxUserPassword').hasError('invalidPassword') &&
+          taxUserForm.get('taxUserPassword').touched">
+            Password must be longer than 6 characters and have at least one digit
+        </p>
+      </div>
+
+      <div class="form-group" >
+        <label>Address 1</label>
+        <input class="form-control" type="text"
+        placeholder="Enter adress"
+        formControlName="taxAddressOne">
+      </div>
+
+      <div class="form-group" >
+        <label>Address 2</label>
+        <input class="form-control" type="text"
+        placeholder="Enter adress"
+        formControlName="taxAddressTwo">
+      </div>
+
+      <div class="form-group" >
+        <label>City</label>
+        <input class="form-control" type="text"
+        placeholder="Enter city"
+        formControlName="taxUserCity">
+      </div>
+
+      <div class="form-group" >
+        <label>State</label>
+        <input class="form-control" type="text"
+        placeholder="Enter state"
+        formControlName="taxUserState">
+      </div>
+
+      <div class="form-group" >
+        <label>Postal ZIP</label>
+        <input class="form-control" type="text"
+        placeholder="Enter postal ZIP"
+        formControlName="taxUserZip">
+      </div>
+
+      <div class="form-group" >
+        <label>Country</label>
+        <input class="form-control" type="text"
+        placeholder="Enter country"
+        formControlName="taxUserCountry">
+      </div>
+
+      <div class="form-group" >
+        <label>Phone Number</label>
+        <input class="form-control" type="tel"
+        placeholder="Enter phone number"
+        formControlName="taxUserPhone">
+      </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="taxUserForm.invalid">Submit</button>
+    </form>
+  </div>
 </div>
-
-
-

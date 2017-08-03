@@ -4,7 +4,7 @@ import {
   Response,
   Headers,
   RequestOptions,
-  URLSearchParams 
+  URLSearchParams
 } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -49,7 +49,6 @@ export class GenericHttpService {
 
   delete(path: string, searchParams: Object = {}): Observable<any> {
     const fullPath: string = `/api/${path}`;
-
     let params: URLSearchParams = new URLSearchParams(),
       options: RequestOptions;
 
@@ -82,8 +81,6 @@ export class GenericHttpService {
 
   get(path: string, searchParams: Object = {}): Observable<any> {
     const fullPath: string = `/api/${path}`;
-
-    console.log(fullPath);
     let params: URLSearchParams = new URLSearchParams(),
       options: RequestOptions;
 
@@ -104,7 +101,6 @@ export class GenericHttpService {
 
   put(path: string, body: Object = {}): Observable<any> {
     const fullPath: string = `/api/${path}`;
-
     let jsonBody: string = JSON.stringify(body),
       options: RequestOptions = new RequestOptions({
         headers: this.shapeHeaders(this.headers)
