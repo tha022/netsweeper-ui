@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ConfigService {
-  basePath: string = 'http://localhost:3000';
+  basePath: string = 'http://localhost:4200';
   usersPath: string = 'pages/users';
   taxUserPath: string = 'taxusers';
   merchantPath: string = 'merchants';
