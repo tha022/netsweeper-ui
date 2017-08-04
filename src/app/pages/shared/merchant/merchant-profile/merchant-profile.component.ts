@@ -2,19 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { ConfigService } from '../../../config/config.service';
-import { ValidationService } from '../../shared/services/validation.service';
+import { ConfigService } from '../../../../config/config.service';
+import { ValidationService } from '../../services/validation.service';
 
-import { Merchant } from '../../../pages/shared/models/merchant';
+import { Merchant } from '../../models/merchant';
 import { MerchantProfileService } from './merchant-profile.service';
-import { MerchantAPIService } from '../../../remote-api/merchant-api.service';
+import { MerchantAPIService } from '../../../../remote-api/merchant-api.service';
 
 import { Location } from '@angular/common';
 
 @Component({
   selector: 'merchant-profile',
   templateUrl: './merchant-profile.component.html',
-  // styleUrls: ['./merchant-profile.component.css'],
 })
 export class MerchantProfileComponent implements OnInit {
 

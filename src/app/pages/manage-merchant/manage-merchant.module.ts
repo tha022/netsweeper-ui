@@ -7,10 +7,10 @@ import { routing } from './manage-merchant.routing';
 
 import { DialogModule } from '../shared/dialog/dialog.module';
 
-import { MerchantProfileComponent } from './merchant-profile/merchant-profile.component';
+import { MerchantProfileComponent } from '../shared/merchant/merchant-profile/merchant-profile.component';
 import { ManageMerchantComponent } from './manage-merchant.component';
 
-import { MerchantProfileService } from './merchant-profile/merchant-profile.service';
+import { MerchantProfileService } from '../shared/merchant/merchant-profile/merchant-profile.service';
 import { ManageMerchantService } from './manage-merchant.service';
 
 @NgModule({

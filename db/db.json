@@ -1,5 +1,34 @@
 {
-  "merchants": [],
+  "merchants": [
+    {
+      "id": "1501835066429",
+      "merchantName": "merchant 17",
+      "username": "user 17",
+      "email": "email17@gmail.com",
+      "password": "merchant17"
+    },
+    {
+      "id": "1501857982852",
+      "merchantName": "merchant 89.1",
+      "username": "user 89",
+      "email": "email@gmail.com",
+      "password": "123456qwer",
+      "adressOne": "",
+      "adressTwo": "",
+      "city": "",
+      "state": "",
+      "postal": "",
+      "country": "",
+      "phone": "",
+      "vat": ""
+    },
+    {
+      "id": "1501859081128",
+      "merchantName": "wertweuyr",
+      "username": "werwye",
+      "email": "email@gmail.com",
+      "password": "12345qwert"
+    }
+  ],
   "taxusers": []
 }
-

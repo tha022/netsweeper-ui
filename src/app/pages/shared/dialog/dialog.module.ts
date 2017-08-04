@@ -11,7 +11,7 @@ import { ManageTaxUserService } from '../../manage-tax-users/manage-tax-users.se
 import { TaxUserProfileService } from '../../manage-tax-users/tax-user-profile/tax-user-profile.service';
 
 import { ManageMerchantService } from '../../manage-merchant/manage-merchant.service';
-import { MerchantProfileService } from '../../manage-merchant/merchant-profile/merchant-profile.service';
+import { MerchantProfileService } from '../merchant/merchant-profile/merchant-profile.service';
 
 @NgModule({
   exports: [DialogComponent],

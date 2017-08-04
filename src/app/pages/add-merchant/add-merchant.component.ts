@@ -18,6 +18,7 @@ export class AddMerchantComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder, 
     private router: Router,
+    private route: Router,
     private addMerchantService: AddMerchantService,
     private config: ConfigService,
   ) { }
@@ -51,7 +52,8 @@ export class AddMerchantComponent implements OnInit {
 
       this.addMerchantService.addMerchant(merchant)
         .subscribe(response => {
-          this.addMerchantForm.reset();
+          this.route.navigateByUrl(`pages/merchants/${merchant.id}`);
+          // this.addMerchantForm.reset();
         } 
       );
 
